@@ -1,0 +1,32 @@
+.main-content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    height: 100%;
+    max-height: 709px;
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width:996px) {
+    .main-content {
+        flex-direction: column;
+        max-height: 100%;
+        gap: 20px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width:650px) {
+    .main-content {
+        padding-left: 0;
+        padding-right: 0;
+        gap: 0;
+        padding-bottom: 0;
+    }
+}

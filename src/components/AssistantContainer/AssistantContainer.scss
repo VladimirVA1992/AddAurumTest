@@ -1,0 +1,101 @@
+$color-bg: #fff;
+
+.assistant {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg;
+    border-radius: 20px;
+    padding: 28px;
+    gap: 20px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+
+    &__h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__settings {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    &__settings-action {
+        position: relative;
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        & > img:hover {
+            opacity: 80%;
+        }
+    }
+
+    &__settings-options {
+        display: none;
+    }
+
+    &__settings-options.active{
+        display: block;
+        position: absolute;        
+        top: 50px;
+        right: 0;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 16px 30px;
+        width: 332px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 12px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-weight: 500;
+        
+        & > a:hover {
+            color: #EE26C2;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .assistant {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+
+        &__head {
+            flex-wrap: wrap;
+            position: relative;
+            flex-direction: column;
+            align-items: self-start;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        &__settings-action {
+            position: absolute;
+            top: 0;
+            right: 20px;
+        }
+
+        &__mail {
+            color: #525252;
+        }        
+    }
+}

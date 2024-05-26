@@ -1,0 +1,52 @@
+$bg-color-btn-pink: #EE26C2;
+$bg-color-btn-blue: #2676EE;
+$color-text-btn: #ffffff;
+
+.btn {
+    border-radius: 21px;
+    height: 41px;
+    padding: 10px 22px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-text-btn;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+
+    &--pink {
+        background-color: $bg-color-btn-pink;
+    }
+
+    &--blue {
+        background-color: $bg-color-btn-blue;
+    }
+
+    &:hover {
+        opacity: calc(100% - 20%);
+    }
+}
+
+.chatAction {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+
+@media (max-width:650px) {
+    .chatAction {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .btn {
+        font-size: 14px;
+        
+        &--pink {
+            order: 2;
+        }
+    }
+}
+

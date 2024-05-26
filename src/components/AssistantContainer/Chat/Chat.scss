@@ -1,0 +1,128 @@
+$color-bg-chat: #EBEBEB;
+$color-bg-message: #ffffff;
+
+.chat {
+    background-color: $color-bg-chat;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 596px;
+    border-radius: 20px;
+    padding: 0 26px 0 20px;
+
+    &__start-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 20px;
+
+        & > p {
+            font-size: 16px;
+            line-height: 145%;
+            font-weight: 500;max-width: 470px;
+            text-align: center;
+        }
+    }
+}
+
+.talk {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 389px;
+    overflow-y: scroll;
+    margin-right: -26px;
+    padding-right: 26px;
+
+    &::-webkit-scrollbar {
+        width: 6px;               
+      }
+    &::-webkit-scrollbar-track {
+        background: transparent;        
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #B5B5B5;   
+        border-radius: 20px;       
+        border: 3px solid transparent; 
+    }
+
+    &__date {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 24px;
+        padding-top: 49px;
+    }
+
+    &__data--user {
+        align-self: flex-end;
+
+        & > .talk__assistant-name {
+            display: none;
+        }
+    }
+
+    &__message {
+        gap: 13px;
+        display: flex;
+        align-items: start;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 516px;
+    }
+
+    &__assistant-name {
+        font-size: 18px;
+        font-weight: 600;
+        padding-right: 8px;
+    }
+
+    &__message-text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; 
+    }
+
+    &__message-p {
+        background-color: $color-bg-message;
+        border-radius: 12px;
+        padding: 16px 22px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:996px) {
+    .talk {
+        flex-grow: 1;
+
+        &__date {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .chat {
+        border-radius: 0;
+        height: 710px;
+        padding: 0 20px;
+    }
+
+    .talk {
+        &__message {
+            padding-bottom: 20px;
+            max-width: 301px;
+        }
+
+        &__message-p {
+            font-size: 14px;
+        } 
+
+        &__date {
+            padding-bottom: 26px;
+            padding-top: 30px;
+            color: #525252;
+        }
+    }
+}
