@@ -1,0 +1,32 @@
+.talk__message--user {
+    align-self: flex-end;
+    justify-content: end;
+
+    & .talk__assistant-name {
+        display: none;
+    }
+
+    & .talk__assistant-photo {
+        display: none;
+    }
+
+    & .talk__data {
+        align-self: flex-end;
+    }
+}
+
+.talk__message-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.talk__message--support {
+
+    & .talk__assistant-name {
+        display: none;
+    }
+
+    & .talk__assistant-photo {
+        display: none;
+    }
+}

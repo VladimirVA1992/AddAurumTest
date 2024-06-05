@@ -113,5 +113,17 @@ $color-link-hover: #EE26C2;
         &__logo--mobile {
             height: 24px;
         }
+
+        &__lang-switch {
+            order: 3;
+        }
+
+        &__mail {
+            order: 4;
+        }
+
+        &__social {
+            order: 5;
+        }
     }
 }
