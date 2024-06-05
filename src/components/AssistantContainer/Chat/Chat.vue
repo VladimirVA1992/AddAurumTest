@@ -7,24 +7,11 @@
 
         <div class="talk">
             <div class="talk__date">
-                Сегодня, 20:43
-                <!-- todo сделать динамический вывод даты день время -->
+                <DynamicDate></DynamicDate>
             </div>
-                
-            <div class="talk__message talk__message--assistant">
-                <img src="../../../../assets/assistant-photo.png" alt="">
-                <div class="talk__message-text">
-                    <p class="talk__message-p">Lörem ipsum suparad pepött då satsig och soskap metrosocial. Sapongar trenåvis i hypol innan visiskap, heterovybelt. Besav ditugen stenosade om exopagt.</p>
-                    <div class="talk__data">
-                        <span class="talk__assistant-name">Jim</span><span>20:43</span>
-                        <!-- todo тут вывести динамически если асистент то имя и дату сообщения, если юзер то только дату -->
-                    </div>
-                </div> <!-- talk__message-text -->
-            </div><!-- talk__message -->
 
-            <UserMessage :text="text"></UserMessage>
-
-        </div><!-- talk -->
+            <Messages :messages="$store.getters.getMessages"></Messages>
+        </div>
 
         <ChatAction></ChatAction>
         <ChatForm></ChatForm>
@@ -37,16 +24,12 @@
 <script>
     import ChatAction from './../ChatAction/ChatAction.vue'
     import ChatForm from './../ChatForm/ChatForm.vue'
-    import UserMessage from './../UserMessage/UserMessage.vue'
+    import Messages from './../Messages/Messages.vue'
+    import DynamicDate from '../../DynamicDate/DynamicDate.vue';
 
     export default {
-        data() {
-            return {
-                text: 'Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров.'
-            }
-        },
         components: {
-            ChatAction, ChatForm, UserMessage
-        },
+            ChatAction, ChatForm, Messages, DynamicDate
+        },        
     }
 </script>

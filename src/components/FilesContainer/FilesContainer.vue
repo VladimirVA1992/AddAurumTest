@@ -8,8 +8,9 @@
                 <p>Закажи у личного помощника медиаплан. Он появится в этом разделе</p>
             </div>
 
-            <Files></Files>
-            <Reports></Reports>
+            <FilesList :name="mediaPlansTitle" :filesArr="$store.getters.getPlans" :isActive="isActive"></FilesList>
+            <FilesList :name="reportsTitle" :filesArr="$store.getters.getReports"></FilesList>
+
         </div> <!-- files-container__wraper -->
     </div><!-- files-container -->
 </template>
@@ -18,12 +19,18 @@
 <style lang="scss" src="./FilesContainer.scss" scoped></style>
 
 <script>
-    import Files from './Files/Files.vue'
-    import Reports from './Reports/Reports.vue'
+    import FilesList from './FilesList/FilesList.vue'
 
     export default {
+        data() {
+            return{
+                mediaPlansTitle: 'Медиапланы',
+                reportsTitle: 'Отчеты',
+                isActive: true,
+            }
+        },
         components: {
-            Files, Reports
+            FilesList
         }, 
     }
 </script>

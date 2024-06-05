@@ -33,7 +33,7 @@ $color-bg-message: #ffffff;
     max-height: 389px;
     overflow-y: scroll;
     margin-right: -26px;
-    padding-right: 26px;
+    padding-right: 26px;    
 
     &::-webkit-scrollbar {
         width: 6px;               
@@ -54,12 +54,9 @@ $color-bg-message: #ffffff;
         padding-top: 49px;
     }
 
-    &__data--user {
-        align-self: flex-end;
-
-        & > .talk__assistant-name {
-            display: none;
-        }
+    &__time {
+        font-size: 15px;
+        color: #525252;
     }
 
     &__message {
@@ -69,6 +66,7 @@ $color-bg-message: #ffffff;
         flex-wrap: nowrap;
         width: 100%;
         max-width: 516px;
+        padding-bottom: 11px;
     }
 
     &__assistant-name {
@@ -89,6 +87,10 @@ $color-bg-message: #ffffff;
         padding: 16px 22px;
         font-size: 16px;
         font-weight: 500;
+    }
+
+    &__message--support{
+        max-width: 100%;
     }
 }
 
